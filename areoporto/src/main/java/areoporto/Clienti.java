@@ -57,13 +57,4 @@ class Clienti {
             e.printStackTrace();
         }
     }
-
-    @SuppressWarnings("unchecked")
-    public void ripristinaDaFile(String nomeFile) {
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(nomeFile))) {
-            listaClienti = (List<Cliente>) ois.readObject();
-        } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
 }

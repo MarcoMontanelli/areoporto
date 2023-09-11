@@ -56,13 +56,4 @@ class Prenotazioni {
             e.printStackTrace();
         }
     }
-
-    @SuppressWarnings("unchecked")
-    public void ripristinaDaFile(String nomeFile) {
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(nomeFile))) {
-            listaPrenotazioni = (List<Prenotazione>) ois.readObject();
-        } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
 }

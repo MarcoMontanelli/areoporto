@@ -62,13 +62,5 @@ class Voli {
         }
     }
 
-    @SuppressWarnings("unchecked")
-    public void ripristinaDaFile(String nomeFile) {
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(nomeFile))) {
-            listaVoli = (List<Volo>) ois.readObject();
-        } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
 }
 
